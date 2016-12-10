@@ -44,7 +44,11 @@ The selector of the canvas element.
 <h4>font</h4>
 <em>default: '24px Arial'</em>
 <br>
-Font settings in the format <a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">the canvas font property</a> can be set.  (i.e. 'italic small-caps bold 12px arial')
+Font settings in the format <a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">the canvas font property</a> can be set.  (i.e. 'italic small-caps bold 12px arial')<br>
+<br>
+<em>
+Note: Drawing the text on the canvas may happen earlier than the font completely loaded (depending on font loading time). In these cases either a timeout can be added before creating the QuadraticText instance or the text can be redrawn calling setText method.
+</em>
 </li>
 <li>
 <h4>textColor</h4>
@@ -62,19 +66,28 @@ The color of the curve.
 <h4>curveStart</h4>
 <em>default: new Point(20, 50)</em>
 <br>
-The start point of the curve on the canvas. (note: the Point class is defined in the library)
+The start point of the curve on the canvas. <br><br>
+<em>
+Note: the Point class is defined in the library.
+</em>
 </li>
 <li>
 <h4>curveEnd</h4>
 <em>default: new Point(280, 50)</em>
 <br>
-The end point of the curve on the canvas. (note: the Point class is defined in the library.)
+The end point of the curve on the canvas.  <br><br>
+<em>
+Note: the Point class is defined in the library.
+</em>
 </li>
 <li>
 <h4>control</h4>
 <em>default: new Point(150, 150)</em>
 <br>
-The control point of the curve on the canvas. (note: the Point class is defined in the library.)
+The control point of the curve on the canvas.  <br><br>
+<em>
+Note: the Point class is defined in the library.
+</em>
 </li>
 <li>
 <h4>align</h4>
@@ -88,10 +101,22 @@ The alignment of the text. Either 'left' or 'center' (right alignment is not imp
 <li>
 <h5>setText(text)</h5>
 Clears the canvas and draws the text passed on it.
+<pre>
+<code>
+ let qt = new QuadraticText(options);
+ qt.setText ("hello");
+  </code>
+  </pre>
 </li>
 <li>
 <h5>addText(text)</h5>
 Draws the text passed on the canvas without clearing it.
+<pre>
+<code>
+ let qt = new QuadraticText(options);
+ qt.addText("Hello");
+  </code>
+  </pre>
 </li>
 </ol>
 
