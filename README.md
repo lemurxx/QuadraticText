@@ -68,21 +68,30 @@ The start point of the curve on the canvas. (note: the Point class is defined in
 <h4>curveEnd</h4>
 <em>default: new Point(280, 50)</em>
 <br>
-The end point of the curve on the canvas. (note: the Point class is defined in the library)
+The end point of the curve on the canvas. (note: the Point class is defined in the library.)
 </li>
 <li>
 <h4>control</h4>
 <em>default: new Point(150, 150)</em>
 <br>
-The control point of the curve on the canvas. (note: the Point class is defined in the library)
+The control point of the curve on the canvas. (note: the Point class is defined in the library.)
 </li>
 <li>
 <h4>align</h4>
 <em>default: 'left'</em>
 <br>
-The alignment of the text. Either 'left' or 'center' (right alignment is not implemented),
+The alignment of the text. Either 'left' or 'center' (right alignment is not implemented).
 </li>
-
-
+</ol>
+<h4>Methods</h4>
+<ol>
+<li>
+<h5>setText(text)</h5>
+Clears the canvas and draws the text passed on it.
+</li>
+<li>
+<h5>addText(text)</h5>
+Draws the text passed on the canvas without clearing it.
+</li>
 </ol>
 
