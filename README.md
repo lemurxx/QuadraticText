@@ -48,7 +48,7 @@ The selector of the canvas element.
 <h4>font</h4>
 <em>default: '24px Arial'</em>
 <br>
-Font settings in the format <a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">the canvas font property</a> can be set.  (i.e. 'italic small-caps bold 12px arial')<br>
+Font settings in the format of <a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">the canvas font property</a>. (i.e. 'italic small-caps bold 12px arial')<br>
 <br>
 <em>
 Note: Drawing the text on the canvas may happen earlier than the font completely loaded (depending on font loading time). In these cases either a timeout can be added before creating the QuadraticText instance or the text can be redrawn calling setText method.
