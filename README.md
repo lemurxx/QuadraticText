@@ -103,8 +103,7 @@ Clears the canvas and draws the text passed on it.
 <br><br>
 <pre>
 <code>let qt = new QuadraticText(options);
-qt.setText ("hello");</code>
-  </pre>
+qt.setText ("hello");</code></pre>
 </li>
 <li>
 <h4>addText(text)</h4>
@@ -112,8 +111,7 @@ Draws the text passed on the canvas without clearing it.
 <br><br>
 <pre>
 <code>let qt = new QuadraticText(options);
-qt.addText("Hello");</code>
-  </pre>
+qt.addText("Hello");</code></pre>
 </li>
 </ol>
 
