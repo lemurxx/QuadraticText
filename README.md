@@ -36,49 +36,49 @@ let qt = new QuadraticText(options);
 <ol>
 <li>
 <h4>canvas</h4>
-<em>Default: 'canvas'</em>
+<em>default: 'canvas'</em>
 <br>
 The selector of the canvas element.
 </li>
 <li>
 <h4>font</h4>
-<em>Default: '24px Arial'</em>
+<em>default: '24px Arial'</em>
 <br>
 Font settings in the format <a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">the canvas font property</a> can be set.  (i.e. 'italic small-caps bold 12px arial')
 </li>
 <li>
 <h4>textColor</h4>
-<em>Default: 'black'</em>
+<em>default: 'black'</em>
 <br>
 The color of the text.
 </li>
 <li>
 <h4>curveColor</h4>
-<em>Default: 'transparent'</em>
+<em>default: 'transparent'</em>
 <br>
 The color of the curve.
 </li>
 <li>
 <h4>curveStart</h4>
-<em>Default: new Point(20, 50)</em>
+<em>default: new Point(20, 50)</em>
 <br>
-The start point of the curve on the canvas. (The Point class is defined in the library)
+The start point of the curve on the canvas. (note: the Point class is defined in the library)
 </li>
 <li>
 <h4>curveEnd</h4>
-<em>Default: new Point(280, 50)</em>
+<em>default: new Point(280, 50)</em>
 <br>
-The end point of the curve on the canvas. (The Point class is defined in the library)
+The end point of the curve on the canvas. (note: the Point class is defined in the library)
 </li>
 <li>
 <h4>control</h4>
-<em>Default: new Point(150, 150)</em>
+<em>default: new Point(150, 150)</em>
 <br>
-The control point of the curve on the canvas. (The Point class is defined in the library)
+The control point of the curve on the canvas. (note: the Point class is defined in the library)
 </li>
 <li>
 <h4>align</h4>
-<em>Default: 'left'</em>
+<em>default: 'left'</em>
 <br>
 The alignment of the text. Either 'left' or 'center' (right alignment is not implemented),
 </li>
