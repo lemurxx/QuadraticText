@@ -96,10 +96,10 @@ Note: the Point class is defined in the library.
 The alignment of the text. Either 'left' or 'center' (right alignment is not implemented).
 </li>
 </ol>
-<h4>Methods</h4>
+<h3>Methods</h3>
 <ol>
 <li>
-<h5>setText(text)</h5>
+<h4>setText(text)</h4>
 Clears the canvas and draws the text passed on it.
 <pre>
 <code>
@@ -109,7 +109,7 @@ Clears the canvas and draws the text passed on it.
   </pre>
 </li>
 <li>
-<h5>addText(text)</h5>
+<h4>addText(text)</h4>
 Draws the text passed on the canvas without clearing it.
 <pre>
 <code>
