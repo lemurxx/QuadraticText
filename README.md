@@ -13,7 +13,7 @@ Library for drawing text to HTML5 canvas along a quadratic curve path.
 </li>
 <li>
 Create a QuadraticText instance.<br>
-<pre>
+<pre style="padding:0 16px">
 <code>
 let options: QuadraticTextOptions = {
     canvas: '#canvas-1',
@@ -101,7 +101,7 @@ The alignment of the text. Either 'left' or 'center' (right alignment is not imp
 <li>
 <h4>setText(text)</h4>
 Clears the canvas and draws the text passed on it.
-<pre>
+<pre style="padding:0 16px">
 <code>
  let qt = new QuadraticText(options);
  qt.setText ("hello");
@@ -111,7 +111,7 @@ Clears the canvas and draws the text passed on it.
 <li>
 <h4>addText(text)</h4>
 Draws the text passed on the canvas without clearing it.
-<pre>
+<pre style="padding:0 16px">
 <code>
  let qt = new QuadraticText(options);
  qt.addText("Hello");
