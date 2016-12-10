@@ -19,7 +19,6 @@ var options2 = {
 };
 var qt1 = new QuadraticText(options);
 var qt2 = new QuadraticText(options2);
-'input#curvedText';
 $(document).on('input', 'input#curvedText', function () {
     qt1.setText($(this).val());
     qt2.setText($(this).val());
