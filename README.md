@@ -104,7 +104,7 @@ The alignment of the text. Either 'left' or 'center' (right alignment is not imp
 <ol>
 <li>
 <h4>setText(text)</h4>
-Clears the canvas and draws the text passed on it.
+Clears the canvas and draws the text passed to the method on it.
 <br><br>
 <pre>
 <code>let qt = new QuadraticText(options);
@@ -112,7 +112,7 @@ qt.setText ("hello");</code></pre>
 </li>
 <li>
 <h4>addText(text)</h4>
-Draws the text passed on the canvas without clearing it.
+Draws the text passed to the method on the canvas without clearing the canvas.
 <br><br>
 <pre>
 <code>let qt = new QuadraticText(options);
