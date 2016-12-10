@@ -51,7 +51,7 @@ The selector of the canvas element.
 Font settings in the format of <a href="http://www.w3schools.com/tags/canvas_font.asp" target="_blank">the canvas font property</a>. (i.e. 'italic small-caps bold 12px arial')<br>
 <br>
 <em>
-Note: Drawing the text on the canvas may happen earlier than the font completely loaded (depending on font loading time). In these cases either a timeout can be added before creating the QuadraticText instance or the text can be redrawn calling setText method.
+Note: Drawing the text on the canvas may happen before the font is completely loaded (depending on font loading time). In these cases creating the QuadraticText instance or calling the setText method has to be delayed for a few milliseconds.
 </em>
 </li>
 <li>
