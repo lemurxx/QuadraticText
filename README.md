@@ -92,6 +92,9 @@ The control point of the curve on the canvas.  <br><br>
 <em>
 Note: the Point class is defined in the library.
 </em>
+<br>
+<br>
+<img src="doc/quadratic.png">
 </li>
 <li>
 <h4>align</h4>
