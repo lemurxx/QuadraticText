@@ -1,5 +1,7 @@
 # QuadraticText
 Library for drawing text to HTML5 canvas along a quadratic curve path. 
+<br><br>
+<img src="doc/quadratic-text.png">
 
 <a href="http://codepen.io/lemurx/full/NbYVPZ/" target="_blank">Demo 1</a><br>
 <a href="http://codepen.io/lemurx/full/JbLzYw/" target="_blank">Demo 2</a>
