@@ -1,0 +1,7 @@
+node_modules
+typings
+gulpfile.js
+gulpconfig.json
+tsconfig.json
+typings.json
+package.json
