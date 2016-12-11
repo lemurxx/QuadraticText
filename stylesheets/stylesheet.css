@@ -71,7 +71,7 @@ h1,h2,h3,h4 {
 
 div.share {
   text-align: center;
-    padding:20px;
+    padding:20px 0 0;
 }
 div.share a {
   text-decoration:none;
