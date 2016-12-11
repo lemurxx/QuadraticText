@@ -62,6 +62,11 @@ a {
   font-family: "Amatic SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:90px;
   letter-spacing:3px;
+  color:gold;
+}
+
+h1,h2,h3,h4 {
+  color:skyblue;
 }
 
 @media screen and (min-width: 64em) {
