@@ -56,11 +56,12 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #9cc885; }
+  background-color: #272728; }
 
 .page-header h1 {
   font-family: "Amatic SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:70px;
+  font-size:90px;
+  letter-spacing:3px;
 }
 
 @media screen and (min-width: 64em) {
