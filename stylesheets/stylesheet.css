@@ -69,6 +69,16 @@ h1,h2,h3,h4 {
   color:skyblue;
 }
 
+div.share {
+  text-align: center
+}
+div.share a {
+  text-decoration:none;
+}
+div.share a i {
+  font-size:24px;
+}
+
 @media screen and (min-width: 64em) {
   .page-header {
     padding: 5rem 6rem; } }
