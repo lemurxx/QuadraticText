@@ -60,6 +60,7 @@ a {
 
 .page-header h1 {
   font-family: "Amatic SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:70px;
 }
 
 @media screen and (min-width: 64em) {
