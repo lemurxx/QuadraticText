@@ -7,10 +7,12 @@ Library for drawing text to HTML5 canvas along a quadratic curve path.
 <a href="http://codepen.io/lemurx/full/JbLzYw/" target="_blank">Demo 2</a>
 <h3>Usage</h3>
 <ol>
-<li>Add quadratic-text.js to your page.
+<li>Add jquery and quadratic-text.js to your page.
 <br><br>
 <pre>
-<code>&lt;script src="quadratic-text.js"&gt;&lt;/script&gt;</code>
+<code>
+&lt;script src="quadratic-text.js"&gt;&lt;/script&gt;
+&lt;script src="quadratic-text.js"&gt;&lt;/script&gt;</code>
 </pre>
 </li>
 <li>Create a canvas element..<br>
