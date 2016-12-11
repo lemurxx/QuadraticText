@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Quadratictext by lemurxx</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Quadratictext</h1>
+        <h2>Library for drawing text to HTML5 canvas along a quadratic curve path. </h2>
+        <a href="https://github.com/lemurxx/QuadraticText" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="quadratictext" class="anchor" href="#quadratictext" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>QuadraticText</h1>
+
+<p>Library for drawing text to HTML5 canvas along a quadratic curve path. 
+<br><br>
+<img src="doc/quadratic-text.png"></p>
+
+<p><a href="http://codepen.io/lemurx/full/NbYVPZ/">Demo 1</a><br>
+<a href="http://codepen.io/lemurx/full/JbLzYw/">Demo 2</a></p>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
+
+<ul>
+<li>Add quadratic-text.js to your page.
+<br><br>
+<pre>
+<code>&lt;script src="quadratic-text.js"&gt;&lt;/script&gt;</code>
+</pre>
+</li>
+<li>Create a canvas element..<br>
+<br>
+<pre>
+<code>&lt;canvas id="canvas-1" width="500" height="500"&gt;&lt;/canvas&gt;</code>
+</pre>
+</li>
+<li>
+Create a QuadraticText instance.<br><br>
+<pre>
+<code>let options: QuadraticTextOptions = {
+    canvas: '#canvas-1',
+    font: '30px Verdana',
+    textColor: 'gold',
+    curveColor: 'transparent',
+    curveStart: new Point(50, 290),
+    curveEnd: new Point(450, 290),
+    control: new Point(250, 650),
+    align: 'center',
+    text: "Hello"
+};
+
+let qt = new QuadraticText(options);</code>
+</pre>
+</li>
+</ul>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<ul>
+<li>
+<h4>
+<a id="canvas" class="anchor" href="#canvas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>canvas</h4>
+<em>default: 'canvas'</em>
+<br>
+The selector of the canvas element.
+</li>
+<li>
+<h4>
+<a id="font" class="anchor" href="#font" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>font</h4>
+<em>default: '24px Arial'</em>
+<br>
+Font settings in the format of <a href="http://www.w3schools.com/tags/canvas_font.asp">the canvas font property</a>. (i.e. 'italic small-caps bold 12px arial')<br>
+<br>
+<em>
+Note: Drawing the text on the canvas may happen before the font is completely loaded (depending on font loading time). In these cases creating the QuadraticText instance or calling the setText method has to be delayed for a few milliseconds.
+</em>
+</li>
+<li>
+<h4>
+<a id="textcolor" class="anchor" href="#textcolor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>textColor</h4>
+<em>default: 'black'</em>
+<br>
+The color of the text.
+</li>
+<li>
+<h4>
+<a id="curvecolor" class="anchor" href="#curvecolor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>curveColor</h4>
+<em>default: 'transparent'</em>
+<br>
+The color of the curve.
+</li>
+<li>
+<h4>
+<a id="curvestart" class="anchor" href="#curvestart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>curveStart</h4>
+<em>default: new Point(20, 50)</em>
+<br>
+The start point of the curve on the canvas. <br><br>
+<em>
+Note: the Point class is defined in the library.
+</em>
+</li>
+<li>
+<h4>
+<a id="curveend" class="anchor" href="#curveend" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>curveEnd</h4>
+<em>default: new Point(280, 50)</em>
+<br>
+The end point of the curve on the canvas.  <br><br>
+<em>
+Note: the Point class is defined in the library.
+</em>
+</li>
+<li>
+<h4>
+<a id="control" class="anchor" href="#control" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>control</h4>
+<em>default: new Point(150, 150)</em>
+<br>
+The control point of the curve on the canvas.  <br><br>
+<em>
+Note: the Point class is defined in the library.
+</em>
+<br>
+<br>
+<img src="doc/quadratic.png">
+</li>
+<li>
+<h4>
+<a id="align" class="anchor" href="#align" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>align</h4>
+<em>default: 'left'</em>
+<br>
+The alignment of the text. Either 'left' or 'center' (right alignment is not implemented).
+</li>
+</ul>
+
+<h3>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h3>
+
+<ul>
+<li>
+<h4>
+<a id="settexttext" class="anchor" href="#settexttext" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>setText(text)</h4>
+Clears the canvas and draws the text passed to the method on it.
+<br><br>
+<pre>
+<code>let qt = new QuadraticText(options);
+qt.setText ("hello");</code></pre>
+</li>
+<li>
+<h4>
+<a id="addtexttext" class="anchor" href="#addtexttext" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>addText(text)</h4>
+Draws the text passed to the method on the canvas without clearing the canvas.
+<br><br>
+<pre>
+<code>let qt = new QuadraticText(options);
+qt.addText("Hello");</code></pre>
+</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/lemurxx/QuadraticText/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/lemurxx/QuadraticText/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/lemurxx/QuadraticText"></a> is maintained by <a href="https://github.com/lemurxx">lemurxx</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
