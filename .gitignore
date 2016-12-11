@@ -1,8 +1,14 @@
 
 typings
+
 node_modules
+
 package.json
+
 gulpconfig.json
+
 gulpfile.js
+
 tsconfig.json
+
 typings.json
