@@ -71,12 +71,17 @@ h1,h2,h3,h4 {
 
 div.share {
   text-align: center;
-    padding:20px 0 0;
+    padding:40px 0 0;
 }
 div.share a {
-  text-decoration:none;
-  padding:20px;
-  
+ text-decoration: none;
+    border-radius: 50%;
+    background: #e3f6fa;
+    width: 35px;
+    padding: 5px;
+    height: 35px;
+    margin: 10px;
+    display: inline-block;
 }
 
 
