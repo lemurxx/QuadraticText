@@ -39,6 +39,8 @@ let qt = new QuadraticText(options);</code>
 </pre>
 </li>
 </ol>
+<h3>Dependencies</h3>
+JQuery
 <h3>Options</h3>
 <ol>
 <li>
