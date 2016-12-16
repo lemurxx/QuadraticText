@@ -20,7 +20,8 @@ var QuadraticText = (function () {
             font: '24px Arial',
             textColor: 'black',
             curveColor: 'transparent',
-            align: 'left'
+            align: 'left',
+            spacing: 1
         };
         $.extend(this.options, options);
         this.canvas = $(this.options.canvas);
@@ -47,7 +48,6 @@ var QuadraticText = (function () {
         this.context.quadraticCurveTo(this.options.control.x, this.options.control.y, this.options.curveEnd.x, this.options.curveEnd.y);
         this.context.strokeStyle = this.options.curveColor;
         this.context.fillStyle = this.options.textColor;
-        this.context.font = this.options.font;
         this.context.textBaseline = 'bottom';
         this.context.stroke();
         this.points = [];
@@ -74,7 +74,7 @@ var QuadraticText = (function () {
     };
     QuadraticText.prototype.alignCenter = function () {
         var curveLength = this.getCurveLength();
-        var textLength = this.context.measureText(this.options.text).width;
+        var textLength = this.context.measureText(this.options.text).width + (this.options.text.length - 1) * this.options.spacing;
         var point = this.points[0];
         if (curveLength <= textLength)
             return point;
@@ -83,6 +83,7 @@ var QuadraticText = (function () {
     };
     QuadraticText.prototype.drawText = function () {
         var textLen = this.options.text.length;
+        this.context.font = this.options.font;
         var point = this.points[0];
         if (this.options.align == 'center')
             point = this.alignCenter();
@@ -95,7 +96,7 @@ var QuadraticText = (function () {
     QuadraticText.prototype.drawRotatedChar = function (char, point) {
         if (point) {
             var point1 = point;
-            var point2 = this.getNextPoint(point, this.context.measureText(char).width);
+            var point2 = this.getNextPoint(point, this.context.measureText(char).width + this.options.spacing);
             if (point2) {
                 var alpha = -this.getAlpha(point1, point2);
                 if (point1.x > point2.x) {

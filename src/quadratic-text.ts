@@ -20,6 +20,7 @@ interface QuadraticTextOptions {
   textColor?: string;
   curveColor?: string;
   align?: string;
+  spacing?: number;
 }
 
 class QuadraticText {
@@ -36,7 +37,8 @@ class QuadraticText {
     font: '24px Arial',
     textColor: 'black',
     curveColor: 'transparent',
-    align: 'left'
+    align: 'left',
+    spacing: 1
   };
 
   constructor(options: QuadraticTextOptions) {
@@ -71,7 +73,6 @@ class QuadraticText {
     this.context.quadraticCurveTo(this.options.control.x, this.options.control.y, this.options.curveEnd.x, this.options.curveEnd.y);
     this.context.strokeStyle = this.options.curveColor;
     this.context.fillStyle = this.options.textColor;
-    this.context.font = this.options.font;
     this.context.textBaseline = 'bottom';
     this.context.stroke();
     this.points = [];
@@ -101,7 +102,7 @@ class QuadraticText {
 
   private alignCenter() {
     let curveLength = this.getCurveLength();
-    let textLength = this.context.measureText(this.options.text).width;
+    let textLength = this.context.measureText(this.options.text).width + (this.options.text.length - 1) * this.options.spacing;
     let point = this.points[0];
     if (curveLength <= textLength)
       return point;
@@ -111,6 +112,7 @@ class QuadraticText {
 
   private drawText() {
     let textLen = this.options.text.length;
+    this.context.font = this.options.font;
     let point = this.points[0];
     if (this.options.align == 'center')
       point = this.alignCenter();
@@ -124,7 +126,7 @@ class QuadraticText {
   private drawRotatedChar(char, point) {
     if (point) {
       let point1 = point;
-      let point2 = this.getNextPoint(point, this.context.measureText(char).width);
+      let point2 = this.getNextPoint(point, this.context.measureText(char).width + this.options.spacing);
       if (point2) {
         let alpha = -this.getAlpha(point1, point2);
         if (point1.x > point2.x) {

@@ -17,7 +17,8 @@ let options2: QuadraticTextOptions = {
     curveEnd: new Point(450, 290),
     control: new Point(250, 650),
     align: 'center',
-    text: "Hello"
+    text: "Hello",
+    spacing: 3
 };
 
 let qt1 = new QuadraticText(options);
@@ -27,7 +28,7 @@ $(document).on('input', 'input#curvedText', function () {
     qt1.setText($(this).val());
     qt2.setText($(this).val())
 });
-$('input#curvedText').val('Lórum ipse mindaddig jól forogat, míg meg nem');
+$('input#curvedText').val('Lórum ipse ébrető, a dörtestély végtelen');
 setTimeout(function () {
     $('input#curvedText').trigger('input');
 }, 500);
