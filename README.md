@@ -32,6 +32,7 @@ Create a QuadraticText instance.<br><br>
     curveEnd: new Point(450, 290),
     control: new Point(250, 650),
     align: 'center',
+    spacing: 2,
     text: "Hello"
 };
 
@@ -106,6 +107,12 @@ Note: the Point class is defined in the library.
 <em>default: 'left'</em>
 <br>
 The alignment of the text. Either 'left' or 'center' (right alignment is not implemented).
+</li>
+<li>
+<h4>spacing</h4>
+<em>default: '1'</em>
+<br>
+The spacing between characters in pixels.
 </li>
 </ol>
 <h3>Methods</h3>
