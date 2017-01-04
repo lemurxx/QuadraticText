@@ -61,7 +61,7 @@ class QuadraticText {
 
 
   private redrawText() {
-    this.context.clearRect(0, 0, 500, 500);
+    this.context.clearRect(0, 0, this.canvas[0].width, this.canvas[0].height);
     this.drawCurve();
     this.drawText();
   }
